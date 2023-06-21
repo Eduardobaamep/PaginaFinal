@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcd.bootstrapcdn.con/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="footer.css">    
+           
+<title>Proyecto</title>
+</head>
+<body>
+<style>
+    body{
+    background-image: linear-gradient(to right, #E0E79C, #521945, #37371F, #937D64, #585B56);
+}
+</style>
+<div style="margin:24px;">
+    <nav class="navbar navbar-light" style="background-color: #553739;">
+    <div class="container">
+    <a class="navbar-brand" href="index.html">Inicio</a>
+    <ul class="nav navbar-nav">
+<li>
+    <a href="calculadora.html">Calculadora</a>
+</li>
+<li>
+<a href="calculadorafisica.html">Calculadora Fisica</a>
+</li>
+<li>
+<a href="perfil.html">Perfil</a>
+</li>
+<li>
+<a href="movies.html">Api Movies</a>
+</li>
+<li>
+<a href="cuestionario.html">Cuestionario</a>
+</li>
+<li>
+<a href="menu.html">Menu</a>
+</li>
+<li>
+<a href="formulario.html">Formulario</a>
+</li>
+<li>
+<a href="pedrealizado.html">Pedido</a>
+</li>
+</li>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+	<ti>Formulario</ti>
+	<form id="pedido">
+		<p> Nombre: <input type="text" name="nombre" id="nombre" size="40">
+		</p>
+		<p> Apellido: <input type="text" name="apellido" id="apellido" size="40">
+		</p>
+		<p> Direccion: <input type="text" name="direccion" id="direccion" size="40">
+		</p>
+		<p> Colonia: <input type="text" name="colonia" id="colonia" size="40">
+		</p>
+		<p> Telefono: <input type="number" name="telefono" id="telefono" size="40">
+		</p>
+		<p> Sexo: <input type="radio" name="sexo" value="hombre"><blue>Hombre </blue><input type="radio" name="sexo" value="mujer"><red>Mujer</red>
+		</p>
+		<br>
+		<br>
+	<p> Que vas a pedir:
+		<select name="menu" id="menu">
+			<optgroup label="Comida Japonesa">
+			<option value="tempura">Tempura</option>
+			<option value="sashimi">Sashimi</option>
+			<option value="ramen">Ramen</option>
+			<option value="takoyaki">Takoyaki</option>
+			<option value="onigiri">Onigiri</option>
+			<option value="sushi">Sushi</option>
+		</select>
+		<br>
+		<p> Que vas a pedir de bebida:
+		<select name="bebida" id="bebida">
+			<option value="ninguno">Ninguno</option>
+			<optgroup label="Tes">
+			<option value="te verde">Te verde</option>
+			<option value="mugicha">Mugicha</option>
+		</optgroup>
+			<optgroup label="Alcohol">
+			<option value="sake">Sake</option>
+			<option value="shochu">Shochu</option>
+		  </optgroup>
+		</select>
+		<br>
+		<ti>Extras</ti>
+		<br>
+		<input type="checkbox" id="servilletas" checked><label for="servilletas" style="font-size: 20px;">Servilletas</label><br>
+		<input type="checkbox" id="cebolla" checked><label for="cebolla" style="font-size: 20px;">Cebolla</label><br>
+		<input type="checkbox" id="kepchup" checked><label for="kepchup" style="font-size: 20px;">Kepchup</label><br>
+		<input type="checkbox" id="salsa" checked><label for="salsa" style="font-size: 20px;">Salsa</label><br>
+		<input type="checkbox" id="aguacate" checked><label for="aguacate" style="font-size: 20px;">Aguacate</label><br>
+	</p>
+	</p>
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Borrar">
+
+
+
+	</form>
+
+<script type="text/javascript">
+	const form=document.getElementById("pedido");
+	form.addEventListener("submit", function(event){
+		event.preventDefault();
+		const formData=new FormData(form);
+		const orden={
+			nombre:formData.get("nombre"),
+			apellido:formData.get("apellido"),
+			telefono:formData.get("telefono"),
+			direccion:formData.get("direccion"),
+			colonia:formData.get("colonia"),
+			sexo:formData.get("sexo"),
+			menu:formData.get("menu"),
+			soda:formData.get("bebida"),
+			serviletas:document.getElementById("servilletas").checked ? "si" : "no",
+			salsa:document.getElementById("salsa").checked ? "si" : "no",
+			kepchup:document.getElementById("kepchup").checked ? "si" : "no",
+			cebolla:document.getElementById("cebolla").checked ? "si" : "no",
+			aguacate:document.getElementById("aguacate").checked ? "si" : "no"
+
+
+		};
+		localStorage.setItem("orden", JSON.stringify(orden));
+		window.location.href="pedidorealizado.html";
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+body{
+    background-color: #dec07a;
+}
+.center{
+    display: block;
+    width: 300px;
+    margin-right: 300px;
+    margin-left: 540px;
+    
+}
+.left{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 500px;
+}
+titulo{
+    font-family: 'Merriweather', serif;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ti{
+    font-family: 'Merriweather', serif;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input:focus{
+    outline:4px #358f51;
+}
+table{
+    margin-left: 350px;
+    background-color: lightcyan;
+    color: black;
+    text-align: center;
+     width: 600px;"
+}
+pad{
+    margin-left: auto;
+    margin-right: 100px;
+}
+table1{
+    margin-left: 250px;
+    background-color: greenyellow;
+    color: black;
+    text-align: center;
+    width: 600px;"
+}
+th{
+    color: #2e0f85;
+}
+
+ham{
+    color: #2e0f85;
+    font-family: 'Faustina', serif;
+}
+ta{
+    color: #2e0f85;
+    font-family: 'Faustina', serif;
+}
+si{
+    color: #2e0f85;
+    font-family: 'Faustina', serif;
+}
+pi{
+    color: #2e0f85;
+    font-family: 'Faustina', serif;
+}
+pa{
+    color: #2e0f85;
+    font-family: 'Faustina', serif;
+}
+red{
+    color: red;
+}
+blue{
+    color: blue;
+}
